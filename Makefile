@@ -13,11 +13,11 @@ build:
 .PHONY: build
 
 ## Run pre-commit checks
-pre-commit:
+precommit:
 	@echo "+ $@"
 	@if [ ! -d .git ]; then git init && git add .; fi;
 	@tox -e lint
-.PHONY: pre-commit
+.PHONY: precommit
 
 ## List make targets
 list:
