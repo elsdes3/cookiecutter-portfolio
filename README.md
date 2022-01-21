@@ -34,8 +34,6 @@ Create a minimal folder structure for a datascience project.
    ```
 2. Set your prefered values for **all** variables in
    - `cookiecutter-portfolio/cookiecutter-project/config.yaml`
-
-   Note that every variable present in `cookiecutter.json` must also be present in `config.yaml`.
 3. Change into the project directory
    ```bash
    cd cookiecutter-portfolio
@@ -46,5 +44,6 @@ Create a minimal folder structure for a datascience project.
    ```
 
 ## [Notes](#notes)
-1. This template a customized version of the `cookiecutter-datascience` template ([v2](https://github.com/drivendata/cookiecutter-data-science/tree/v2)).
-2. The Python library `tox` is used for managing Python virtual environments. See these links ([1](https://christophergs.com/python/2020/04/12/python-tox-why-use-it-and-tutorial/), [2](https://towardsdatascience.com/exclusive-how-to-deploy-your-first-machine-learning-models-bf0a2109e522)) for details about how `tox` can be used to do this for a machine learning project.
+1. Every variable present in `cookiecutter.json` must also be present in `config.yaml`. Values will only be taken from `cookiecutter-portfolio/cookiecutter-project/config.yaml`. Values in `cookiecutter-portfolio/cookiecutter-project/cookiecutter.json` will be ignored.
+2. This template a customized version of the `cookiecutter-datascience` template ([v2](https://github.com/drivendata/cookiecutter-data-science/tree/v2)).
+3. The Python library `tox` is used for managing Python virtual environments. See these links ([1](https://christophergs.com/python/2020/04/12/python-tox-why-use-it-and-tutorial/), [2](https://towardsdatascience.com/exclusive-how-to-deploy-your-first-machine-learning-models-bf0a2109e522)) for details about how `tox` can be used to do this for a machine learning project.
