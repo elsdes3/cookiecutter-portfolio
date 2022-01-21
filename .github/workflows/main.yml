@@ -11,5 +11,5 @@ jobs:
       with:
         python-version: '3.9'
     - run: pip install tox
-    - run: make lint
-    - run: make build
+    - run: make precommit
+    - run: make ci
