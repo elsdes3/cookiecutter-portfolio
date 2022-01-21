@@ -1,0 +1,13 @@
+{
+    "repo_name": "name-of-github-repository",
+    "author_name": "your-github-user-name",
+    "description": "A short description of the project, to be used in setup.py.",
+    "open_source_license": [
+        "MIT",
+        "BSD-3-Clause",
+        "No license file"
+    ],
+    "python_version": [
+        "3.9.5"
+    ]
+}

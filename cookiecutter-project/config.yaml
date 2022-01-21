@@ -1,0 +1,6 @@
+default_context:
+    repo_name: "repository-name"
+    description: "A templated datascience project."
+    author_name: elsdes3
+    open_source_license: MIT
+    python_version: 3.9.5
