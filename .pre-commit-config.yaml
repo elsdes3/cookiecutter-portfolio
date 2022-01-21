@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/ambv/black
-    rev: 21.9b0
+    rev: 21.12b0
     hooks:
     - id: black
       name: Ensure black code formatting
@@ -9,7 +9,8 @@ repos:
       verbose: true
       exclude: |
           (?x)(
-              __init__.py
+              __init__.py|
+              ^cookiecutter-project/{{cookiecutter.repo_name}}/
           )
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2
@@ -19,8 +20,12 @@ repos:
       args: ['--ignore=W605,C901,F841,W503']
       language_version: python3.9
       verbose: true
+      exclude: |
+          (?x)(
+              ^cookiecutter-project/{{cookiecutter.repo_name}}/
+          )
   - repo: https://github.com/timothycrosley/isort
-    rev: 5.9.3
+    rev: 5.10.1
     hooks:
     - id: isort
       name: Ensure python modules are sorted
@@ -32,14 +37,14 @@ repos:
               ^cookiecutter-project/{{cookiecutter.repo_name}}/
           )
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
     - id: end-of-file-fixer
       name: Ensure files end in a newline
       language_version: python3.9
       verbose: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
     - id: trailing-whitespace
       name: Ensure trailing whitespace is removed
@@ -47,7 +52,7 @@ repos:
       args: ["--markdown-linebreak-ext=md"]
       verbose: true
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.0
+    rev: 1.7.1
     hooks:
     - id: bandit
       name: Ensure compliance with security checks

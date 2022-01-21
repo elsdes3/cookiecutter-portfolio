@@ -16,7 +16,7 @@ build:
 precommit:
 	@echo "+ $@"
 	@if [ ! -d .git ]; then git init && git add .; fi;
-	@tox -e lint
+	@tox -e precommit
 .PHONY: precommit
 
 ## List make targets
