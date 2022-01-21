@@ -1,6 +1,6 @@
 # Minimal Datascience Project Template
 
-![CI](https://github.com/elsdes3/ds-project/workflows/CI/badge.svg)
+![CI](https://github.com/elsdes3/cookiecutter-portfolio/workflows/CI/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/mit)
 ![OpenSource](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
