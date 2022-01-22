@@ -18,9 +18,13 @@ output_notebook_dir = os.path.join(PROJ_ROOT_DIR, "executed_notebooks")
 
 raw_data_path = os.path.join(data_dir, "raw")
 
-zero_dict_nb_name = "0_get_data.ipynb"
+one_dict_nb_name = "01_get_data.ipynb"
+two_dict_nb_name = "02_process_data.ipynb"
 
-zero_dict = dict(ci_run=True, plot_xvar="date")
+one_dict = dict(
+    num_data_files=5, num_rows=10, column_names=["A", "B", "C", "D", "E"]
+)
+two_dict = dict(processed_data_file_name="processed")
 
 
 def papermill_run_notebook(
@@ -73,8 +77,8 @@ def run_notebooks(
 
 
 if __name__ == "__main__":
-    nb_dict_list = [zero_dict]
-    nb_name_list = [zero_dict_nb_name]
+    nb_dict_list = [one_dict, two_dict]
+    nb_name_list = [one_dict_nb_name, two_dict_nb_name]
     notebook_list = [
         {os.path.join(PROJ_ROOT_DIR, nb_name): nb_dict}
         for nb_dict, nb_name in zip(nb_dict_list, nb_name_list)

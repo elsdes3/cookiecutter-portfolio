@@ -1,5 +1,6 @@
 {
     "repo_name": "name-of-github-repository",
+    "module_name": "name-of-python-module",
     "author_name": "your-github-user-name",
     "description": "A short description of the project, to be used in setup.py.",
     "open_source_license": [

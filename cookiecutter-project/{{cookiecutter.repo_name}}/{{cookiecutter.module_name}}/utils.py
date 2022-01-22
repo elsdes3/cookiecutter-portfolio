@@ -35,24 +35,8 @@ def show_df_dtypes_nans(df):
     )
 
 
-def save_to_parquet_file(dfs, parquet_filepaths):
-    """Save DataFrame to parquet file."""
-    for parquet_filepath, df in zip(parquet_filepaths, dfs):
-        try:
-            print(f"Saving data to {parquet_filepath + '.gzip'}", end="...")
-            df.to_parquet(
-                parquet_filepath + ".gzip",
-                engine="auto",
-                index=False,
-                compression="gzip",
-            )
-            print("done.")
-        except Exception as e:
-            print(str(e))
-            raise
-
-
 def summarize_df(df, col_dtype_to_show):
+    """Show dtype, number of NaNs and sample value from DataFrame columns."""
     if col_dtype_to_show == "object":
         # Get string dtype columns
         cols_to_show = list(df.select_dtypes("object"))

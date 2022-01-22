@@ -38,6 +38,8 @@ An overview of the project should go here.
 ## [Notebooks](#notebooks)
 1. `01_get_data.ipynb` ([view](https://nbviewer.org/github/{{ cookiecutter.author_name }}/{{ cookiecutter.repo_name }}/blob/main/01_get_data.ipynb))
    - retrieve the raw data
+2. `02_process_data.ipynb` ([view](https://nbviewer.org/github/{{ cookiecutter.author_name }}/{{ cookiecutter.repo_name }}/blob/main/02_process_data.ipynb))
+   - process the raw data
 
 ### [Project Organization](#project-organization)
 
