@@ -1,0 +1,9 @@
+pytest==6.2.5
+pytest-cookies==0.6.1
+pytest-emoji==0.2.0
+pytest-html==3.1.1
+pytest-md==0.2.0
+pytest-snail==0.1.0
+pytest-repeat==0.9.1
+pytest-variables==1.9.0
+pytest-xdist==2.5.0
