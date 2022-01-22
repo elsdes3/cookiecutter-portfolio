@@ -38,12 +38,33 @@ Create a minimal folder structure for a datascience project.
    ```bash
    cd cookiecutter-portfolio
    ```
-4. Create the templated project, run code formatting checks and run the starter notebook (`0_get_data.ipynb`) programmatically using
+4. Create the templated project, run code formatting checks in the resulting project and run the resulting starter notebook (`0_get_data.ipynb`) programmatically using
    ```bash
    make build
+   ```
+
+## [Tests](#tests)
+1. To test that the expected template is produced
+   ```bash
+   make test clean-tests
    ```
 
 ## [Notes](#notes)
 1. Every variable present in `cookiecutter.json` must also be present in `config.yaml`. Values will only be taken from `cookiecutter-portfolio/cookiecutter-project/config.yaml`. Values in `cookiecutter-portfolio/cookiecutter-project/cookiecutter.json` will be ignored.
 2. This template a customized version of the `cookiecutter-datascience` template ([v2](https://github.com/drivendata/cookiecutter-data-science/tree/v2)).
 3. The Python library `tox` is used for managing Python virtual environments. See these links ([1](https://christophergs.com/python/2020/04/12/python-tox-why-use-it-and-tutorial/), [2](https://towardsdatascience.com/exclusive-how-to-deploy-your-first-machine-learning-models-bf0a2109e522)) for details about how `tox` can be used to do this for a machine learning project.
+
+## Issues
+
+If you encounter any problems, please [file an issue][new-issue] along with a
+detailed description.
+
+## Contributing
+
+Contributions are welcome, and they are greatly appreciated! Every little bit
+helps, and credit will always be given.
+
+## License
+
+Distributed under the terms of the [MIT license][mit], turtle is free and
+open source software.

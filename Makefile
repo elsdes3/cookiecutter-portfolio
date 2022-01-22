@@ -19,6 +19,29 @@ precommit:
 	@tox -e precommit
 .PHONY: precommit
 
+## Remove Python artifacts
+clean-py:
+	@echo "+ $@"
+	@find ./cookiecutter-project/tests -type f -name "*.py[co]" -delete
+	@find ./cookiecutter-project/tests -type d -name "__pycache__" -delete
+.PHONY: clean-py
+
+## Remove test artifacts
+clean-test-coverage:
+	@echo "+ $@"
+	@find "cookiecutter-project/tests/test-logs/" -type f -name "*report*" -delete
+.PHONY: clean-test-coverage
+
+## Clean tests
+.PHONY: clean-tests
+clean-tests: clean-py clean-test-coverage
+
+## Run tests
+test:
+	@echo "+ $@"
+	@tox -e test
+.PHONY: test
+
 ## List make targets
 list:
 	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
