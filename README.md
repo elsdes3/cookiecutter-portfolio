@@ -32,7 +32,7 @@ The instructions in this file have only been verified on Linux and MacOS systems
 
    using
    ```bash
-   pip install cookiecutter tox
+   pip3 install cookiecutter tox
    ```
 2. Install `Make` ([link](https://www.gnu.org/software/make/))
 3. Install `git` from [here].
