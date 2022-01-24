@@ -9,6 +9,8 @@
 ## [Table of Contents](#table-of-contents)
 1. [About](#about)
 2. [Requirements](#requirements)
+   * [Operating System](#operating-system)
+   * [System and Python Packages](#system-and-python-packages)
 3. [Usage](#usage)
 4. [Notes](#notes)
 5. [Issues](#issues)
@@ -20,6 +22,10 @@ Create a minimal folder structure for a datascience project.
 
 ## [Requirements](#requirements)
 
+### [Operating System](#operating-system)
+The instructions in this file have only been verified on Linux and MacOS systems. At the moment, it is not known if these instructions will work on a Windows system.
+
+### [System and Python Packages](#system-and-python-packages)
 1. Install the Python packages
    - `cookiecutter`
    - `tox`
