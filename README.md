@@ -35,6 +35,7 @@ The instructions in this file have only been verified on Linux and MacOS systems
    pip install cookiecutter tox
    ```
 2. Install `Make` ([link](https://www.gnu.org/software/make/))
+3. Install `git` from [here].
 
 ## [Usage](#usage)
 
