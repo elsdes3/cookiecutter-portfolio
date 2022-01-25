@@ -5,12 +5,15 @@
 """Utility functions for notebooks and standalone scripts."""
 
 
+from typing import List
+
 from IPython.display import display
+from pandas import DataFrame
 
 # pylint: disable=invalid-name
 
 
-def show_df(df, nrows=5, header=None):
+def show_df(df: DataFrame, nrows: int = 5, header: List = None) -> None:
     """Show a few of the first and last rows of a DataFrame."""
     df_slice = df.head(nrows).append(df.tail(nrows)) if nrows else df
     if not header:
@@ -18,7 +21,7 @@ def show_df(df, nrows=5, header=None):
     display(df_slice.style.set_caption(header))
 
 
-def show_df_dtypes_nans(df):
+def show_df_dtypes_nans(df: DataFrame) -> None:
     """Show datatypes and number of missing rows in DataFrame."""
     display(
         df.isna()
@@ -35,7 +38,7 @@ def show_df_dtypes_nans(df):
     )
 
 
-def summarize_df(df, col_dtype_to_show):
+def summarize_df(df: DataFrame, col_dtype_to_show: str) -> None:
     """Show dtype, number of NaNs and sample value from DataFrame columns."""
     if col_dtype_to_show == "object":
         # Get string dtype columns
