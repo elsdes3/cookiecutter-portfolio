@@ -39,31 +39,31 @@ def custom_template(tmpdir):
     ]
     for blank_file in blank_files:
         repo_dir.join(blank_file).ensure(file=True)
-    # ========= Prepare files in module dir =========
-    module_dir = repo_dir.join("{{cookiecutter.module_name}}", dir=True)
+    # ========= Prepare files in the custom Python package dir =========
+    module_dir = repo_dir.join("{{cookiecutter.package_name}}", dir=True)
     module_files_list = ["__init__.py", "utils.py"]
     for module_file in module_files_list:
         module_dir.join(module_file).ensure(file=True)
-    # ========= Prepare files in module sub dir =========
-    module_data_files_list = [
+    # ========= Prepare files in modules (sub dirs in package dir) =========
+    data_module_files_list = [
         "__init__.py",
         ".gitkeep",
         "load_data.py",
         "make_dataset.py",
         "process_data.py",
     ]
-    module_features_files_list = [
+    features_module_files_list = [
         "__init__.py",
         ".gitkeep",
         "build_features.py",
     ]
-    module_models_files_list = [
+    models_module_files_list = [
         "__init__.py",
         ".gitkeep",
         "predict_model.py",
         "train_model.py",
     ]
-    module_visualization_files_list = [
+    visualization_module_files_list = [
         "__init__.py",
         ".gitkeep",
         "visualize.py",
@@ -71,10 +71,10 @@ def custom_template(tmpdir):
     for folder, folder_files_list in zip(
         ["data", "features", "models", "visualization"],
         [
-            module_data_files_list,
-            module_features_files_list,
-            module_models_files_list,
-            module_visualization_files_list,
+            data_module_files_list,
+            features_module_files_list,
+            models_module_files_list,
+            visualization_module_files_list,
         ],
     ):
         module_sub_dir = module_dir.join(folder, dir=True)

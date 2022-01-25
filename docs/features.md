@@ -3,7 +3,7 @@
 `cookiecutter-portfolio` creates a
 - Python project directory with a structure chosen to support a datascience project
 - starter notebooks that use the created project's directory structure to import [Python modules](https://docs.python.org/3/tutorial/modules.html)
-- Continuous Integration (CI) conifgurations to execute analysis notebooks and perform code-formatting checks on the supporting Python modules, using Github Actions
+- Continuous Integration (CI) conifguration to execute analysis notebooks and perform code-formatting checks, using Github Actions
 
 It is based on [`cookiecutter-data-science`](https://github.com/drivendata/cookiecutter-data-science/blob/master/README.md#the-resulting-directory-structure), so it's output generally resembles the directory structure produced by that template, with some exceptions and additional features that try to support the [Python-based best practices](https://python.g-node.org/python-summerschool-2011/_media/materials/best_practices/haenel-best-practices-2011-09-standrews.pdf) for the [software development life cycle](https://www.devteam.space/blog/what-is-software-development-lifecycle-and-what-you-plan-for/#5).
 

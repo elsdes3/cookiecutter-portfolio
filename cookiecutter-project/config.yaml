@@ -1,6 +1,6 @@
 default_context:
     repo_name: "repository-name"
-    module_name: "src"
+    package_name: "src"
     description: "A templated datascience project."
     author_name: elsdes3
     open_source_license: MIT

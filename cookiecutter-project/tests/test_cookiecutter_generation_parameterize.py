@@ -27,22 +27,22 @@ root_dir_files_list = [
     "setup.py",
     "tox.ini",
 ]
-module_files_list = ["__init__.py", "utils.py"]
-module_data_files_list = [
+package_files_list = ["__init__.py", "utils.py"]
+data_module_files_list = [
     "__init__.py",
     ".gitkeep",
     "load_data.py",
     "make_dataset.py",
     "process_data.py",
 ]
-module_features_files_list = ["__init__.py", ".gitkeep", "build_features.py"]
-module_models_files_list = [
+features_module_files_list = ["__init__.py", ".gitkeep", "build_features.py"]
+models_module_files_list = [
     "__init__.py",
     ".gitkeep",
     "predict_model.py",
     "train_model.py",
 ]
-module_visualization_files_list = ["__init__.py", ".gitkeep", "visualize.py"]
+visualization_module_files_list = ["__init__.py", ".gitkeep", "visualize.py"]
 
 
 @pytest.mark.parametrize("repo_name", ["name-of-github-repository"])
@@ -96,16 +96,16 @@ def test_non_empty_root_folder_generation(
                 assert file.is_file
 
 
-@pytest.mark.parametrize("module_files", [module_files_list])
-@pytest.mark.parametrize("module_data_files", [module_data_files_list])
-@pytest.mark.parametrize("module_features_files", [module_features_files_list])
-@pytest.mark.parametrize("module_models_files", [module_models_files_list])
+@pytest.mark.parametrize("package_files", [package_files_list])
+@pytest.mark.parametrize("module_data_files", [data_module_files_list])
+@pytest.mark.parametrize("module_features_files", [features_module_files_list])
+@pytest.mark.parametrize("module_models_files", [models_module_files_list])
 @pytest.mark.parametrize(
-    "module_visualization_files", [module_visualization_files_list]
+    "module_visualization_files", [visualization_module_files_list]
 )
 def test_module_folder_generation(
     bake_custom_project,
-    module_files,
+    package_files,
     module_data_files,
     module_features_files,
     module_models_files,
@@ -116,7 +116,7 @@ def test_module_folder_generation(
     proj_dir = result.project_path
     module_dir = proj_dir.joinpath("name-of-python-module")
     assert module_dir.is_dir
-    for file in module_files:
+    for file in package_files:
         file = module_dir.joinpath(file)
         assert file.is_file
 
