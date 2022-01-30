@@ -50,7 +50,7 @@ The instructions in this file have only been verified on Linux and MacOS systems
    ```bash
    cd cookiecutter-portfolio
    ```
-4. Create the templated project, run code formatting checks in the resulting project and run the resulting starter notebook (`0_get_data.ipynb`) programmatically using
+4. Create the templated project, run code formatting checks in the resulting project and run the resulting starter notebook (`01_get_data.ipynb` and `02_process_data.ipynb`) programmatically using
    ```bash
    make build
    ```
