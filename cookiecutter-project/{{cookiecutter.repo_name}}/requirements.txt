@@ -1,12 +1,12 @@
 jupyter==1.0.0
 nb_black==1.0.7
 jupyter_nbextensions_configurator==0.4.1
-numpy==1.22.2
-pandas==1.4.1
+numpy==1.22.3
+pandas==1.4.2
 matplotlib==3.5.1
 seaborn==0.11.2
 pymysql==1.0.2
 python-dotenv==0.19.2
-sqlalchemy==1.4.31
+sqlalchemy==1.4.33
 pyarrow==6.0.1
-fastparquet==0.8.0
+fastparquet==0.8.1
