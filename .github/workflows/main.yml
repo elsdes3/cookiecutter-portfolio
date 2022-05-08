@@ -1,9 +1,14 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: ["main"]
+    tags: ["*"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-  build:
+  precommit-lint-checks:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -12,5 +17,23 @@ jobs:
         python-version: '3.9'
     - run: pip install tox
     - run: make precommit
+  tests:
+    runs-on: ubuntu-latest
+    needs: precommit-lint-checks
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.9'
+    - run: pip install tox
     - run: make test clean-tests
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.9'
+    - run: pip install tox
     - run: make build
