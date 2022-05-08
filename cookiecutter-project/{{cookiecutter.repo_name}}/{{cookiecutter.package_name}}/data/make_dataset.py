@@ -1,4 +1,9 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
+"""Helper functions to create final data from raw data."""
+
 import logging
 from pathlib import Path
 

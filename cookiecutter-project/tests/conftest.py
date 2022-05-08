@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""Define Pytest fixtures to inject into tests."""
+
 
 import json
 

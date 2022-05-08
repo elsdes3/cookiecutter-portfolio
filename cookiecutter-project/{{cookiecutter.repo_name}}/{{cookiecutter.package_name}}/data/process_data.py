@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
+"""Helper functions to process data."""
+
 import pandas as pd
 
 # pylint: disable=invalid-name

@@ -43,6 +43,23 @@ repos:
       language_version: python{{ cookiecutter.python_version[:-2] }}
       args: ["--markdown-linebreak-ext=md"]
       verbose: true
+  - repo: https://github.com/econchick/interrogate
+    rev: 1.5.0
+    hooks:
+    - id: interrogate
+      name: Ensure docstrings are present
+      language_version: python3.9
+      args: [--verbose, --fail-under=95]
+      verbose: true
+      exclude: |
+          (?x)(
+              setup.py|
+              ^{{cookiecutter.package_name}}/__init__.py|
+              ^{{cookiecutter.package_name}}/data/__init__.py|
+              ^{{cookiecutter.package_name}}/features/__init__.py|
+              ^{{cookiecutter.package_name}}/models/__init__.py|
+              ^{{cookiecutter.package_name}}/visualization/__init__.py
+          )
   - repo: https://github.com/PyCQA/bandit
     rev: 1.7.0
     hooks:
