@@ -19,7 +19,7 @@
 7. [License](#license)
 
 ## [About](#about)
-Create a minimal folder structure for a datascience project.
+Create a minimal folder structure for a data science project.
 
 ## [Requirements](#requirements)
 
