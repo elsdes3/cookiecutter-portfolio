@@ -9,4 +9,4 @@ pymysql==1.0.2
 python-dotenv==0.20.0
 sqlalchemy==1.4.40
 pyarrow==9.0.0
-fastparquet==0.8.2
+fastparquet==0.8.3
